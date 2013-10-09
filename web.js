@@ -14,6 +14,10 @@ app.get('/', function(request, response) {
   response.send(output);
 });
 
+app.get('/about', function(req, res) {
+    res.send(fs.readFileSync('about.html').toString());
+});
+
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
