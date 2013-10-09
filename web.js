@@ -18,7 +18,7 @@ app.get('/about', function(req, res) {
     res.send(fs.readFileSync('about.html').toString());
 });
 
-app.get('contact', function(req, res) {
+app.get('/contact', function(req, res) {
     res.send(fs.readFileSync('contact.html').toString());
 });
 
