@@ -22,6 +22,10 @@ app.get('/contact', function(req, res) {
     res.send(fs.readFileSync('contact.html').toString());
 });
 
+app.get('/favicon.ico', function(req, res) {
+    res.send(fs.readFileSync('favicon.ico').toString());
+});
+
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
