@@ -22,6 +22,8 @@ app.get('/contact', function(req, res) {
     res.send(fs.readFileSync('contact.html').toString());
 });
 
+app.use(express.static(__dirname));
+
 app.get('/favicon.ico', function(req, res) {
     res.send(fs.readFileSync('favicon.ico').toString());
 });
