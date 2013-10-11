@@ -24,9 +24,6 @@ app.get('/contact', function(req, res) {
 
 app.use(express.static(__dirname));
 
-app.get('/favicon.ico', function(req, res) {
-    res.send(fs.readFileSync('favicon.ico').toString());
-});
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
